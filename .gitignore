@@ -59,8 +59,8 @@ sysinfo.txt
 crashlytics-build.properties
 
 #folders
-/Scenes
-/Library
-/Logs
-/UserSettings
-/Packages
+Scenes/
+Library/
+Logs/
+UserSettings/
+ProjectSettings/Packages/
