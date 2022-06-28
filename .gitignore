@@ -58,3 +58,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+#folders
+/Scenes
+/Library
+/Logs
+/UserSettings
+/Packages
