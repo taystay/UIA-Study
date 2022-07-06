@@ -7,6 +7,7 @@ public class RelativeMovement : MonoBehaviour
 {
     [SerializeField] Transform target;
 
+    public float pushForce = 3.0f;
     public float rotSpeed = 9.0f;
     public float moveSpeed = 4.0f;
     public float jumpSpeed = 15.0f;
@@ -87,5 +88,10 @@ public class RelativeMovement : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit) {
         contact = hit;
+
+        Rigidbody body = hit.collider.attachedRigidbody;
+        if(body != null && !body.isKinematic) {
+            body.velocity = hit.moveDirection * pushForce;
+        }
     }
 }
